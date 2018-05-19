@@ -1,5 +1,5 @@
 function main() {
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://localhost:8080');
     var chatDiv = document.getElementById('chat');
     var input = document.getElementById('message');
     var button = document.getElementById('submit');
@@ -10,10 +10,10 @@ function main() {
             socket.emit("send message", val);
         }
     }
-    /*function delmassege(a)
+    function delmassege(a)
     {
      socket.emit("uzum em lriv jnjem");
-    }*/
+    }
     button.onclick = handleSubmit;
     //del.onclick =delmassege;
     function handleMessage(msg) {
@@ -26,12 +26,12 @@ function main() {
     socket.on('display message', handleMessage);
 }
 
-    /*function deleteTags(){
-        //https://www.w3schools.com/jquery/jquery_dom_remove.asp
+    function deleteTags(){
+        
     }
 
 
     socket.on("dhima el teqstery du jnji", deleteTags);
-}*/
+
 
 window.onload = main;

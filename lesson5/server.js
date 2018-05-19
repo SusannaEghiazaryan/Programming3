@@ -8,7 +8,7 @@ app.use(express.static("."));
 app.get('/', function (req, res) {
    res.redirect('index.html');
 });
-server.listen(3000);
+server.listen(8080);
 
 io.on('connection', function (socket) {
    for(var i in messages) {
@@ -19,11 +19,11 @@ io.on('connection', function (socket) {
        io.sockets.emit("display message", data);
    })
    
-  /* socket.on("uzum em lriv jnjem", function (data) {
+   socket.on("uzum em lriv jnjem", function (data) {
        messages = [];
        io.sockets.emit("dhima el teqstery du jnji", data);
    })
 
 
-   socket.emit("uzum em lriv jnjem");*/
+   socket.emit("uzum em lriv jnjem");
 });
