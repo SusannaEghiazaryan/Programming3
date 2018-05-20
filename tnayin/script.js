@@ -1,6 +1,6 @@
 function main() {
      console.log("YES");
-    var socket = io.connect('http://localhost:8080');
+    var socket = io.connect('http://localhost:3000');
 
 var value = 0;
 function setup() {
